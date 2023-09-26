@@ -31,7 +31,7 @@ chmod +x alist
 在Alist文件夹中，新建一个alist.sh文件。 并在文件中，粘贴如下代码：
 
 ```
-cd /data/alist/;./alist admin
+cd /data/Alist/;./alist admin
 AlistPID=`ps -w | grep alist | grep -v grep | awk '{print $1}'`
 if [ "$AlistPID" != "" ];then killall alist;fi;sleep 1;
 start-stop-daemon -Sbc root -x ./alist -- server
